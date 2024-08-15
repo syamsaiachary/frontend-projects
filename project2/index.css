@@ -1,0 +1,120 @@
+body {
+  color: #3f3d56;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 0.1px);
+  background-color: antiquewhite;
+}
+
+.container {
+  background-color: #f1f1f1;
+  padding: 1.25rem;
+  margin: 1.25rem;
+  border-radius: 0.6rem;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0.2rem 0.2rem 1rem black;
+}
+
+.container form h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.container form .form-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.container form label {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.container form input {
+  /* border-width: 2px;
+  border-style: solid ; 
+  border-color: #3f3d568f; */
+  border: 2px solid #3f3d568f;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.6rem;
+  width: 100%;
+}
+
+.container form input:focus {
+  border-color: #3f3d56;
+}
+
+.container form .btn {
+  background-color: #3f3d56;
+  padding: 0.625rem 3rem;
+  font-size: 1rem;
+  border-radius: 0.6rem;
+  color: #fff;
+  margin-top: 1.25rem;
+  border: none;
+  outline: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.checkboxes {
+  display: flex;
+  margin: 1rem 0 0.5rem 0;
+  align-items: center;
+  justify-content: start;
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  position: relative;
+  border-radius: 50px;
+  height: 26px;
+  /* padding: 1.25rem; */
+  margin: 0 1.25rem 0 0;
+  width: 50px;
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.ball {
+  background-color: #3f3d56;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.15s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.container form .btn:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+@media (min-width: 600px) {
+  .container {
+    margin: 1.25rem auto;
+    padding: 2rem;
+  }
+  .container form .form-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+}
